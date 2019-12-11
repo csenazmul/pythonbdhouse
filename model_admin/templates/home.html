@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <br>
+    <div class="container">
+        {% for quote in object_list %}
+        <div class="row col-md-12">
+            <div class="card p-3 text-right">
+                <div class="card-header text-left">
+                        {{ quote.quote_category.title }}
+                </div>
+                <blockquote class="blockquote mb-0">
+                    <p>{{ quote.quote}}</p>
+                    <footer class="blockquote-footer">
+                    <small class="text-muted">
+                        {{ quote.author }}
+                    </small>
+                    </footer>
+                </blockquote>
+            </div> 
+        </div>  
+        <br>
+        {% endfor %}
+    </div>                
+{% endblock body%}

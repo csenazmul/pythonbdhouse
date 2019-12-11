@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h1>My Simple Document.</h1>
+    <div>
+        <p>Name : {{ name }}</p>
+        <p>Country : {{ country }}</p>
+        <p>
+            {% for num in list %}
+            <h{{num}}>Cool for Food</h{{num}}>
+            {% endfor %}
+        </p>
+    </div>
+{% endblock body %}
