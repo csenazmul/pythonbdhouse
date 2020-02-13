@@ -1,0 +1,7 @@
+#header, caption{
+    background: #298758!important;
+}
+
+caption a:hover{
+    text-decoration: none!important;
+}

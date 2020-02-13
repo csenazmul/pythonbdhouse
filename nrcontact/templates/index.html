@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  My Contact
+{% endblock title %}
+  
+
+{% block content %}
+  <!-- Main Section -->
+  <div class="container">
+    <h3 class="heading font-weight-light">{{ status }}</h3>
+   
+    <hr />
+  </div>
+  <div class="container main-part">
+    
+    {% if contacts %}
+        {% for contact in contacts %}
+            
+           {% include "partials/_card.html" %}
+
+        {% endfor %}
+    {% else %}
+      <p class="d-block font-weight-light my-2 heading">You have not same any contacts yet!</p>
+    {% endif %}
+    
+  </div>
+
+    
+{% endblock content %}
+  
